@@ -3,6 +3,7 @@ traces of development
 
 ## Architecture
 solid
+controller-business layer-data access layer (node.js 구성)
 
 
 ## Node.js
@@ -16,4 +17,6 @@ solid
 basic
 jwt
 Oauth2
+
+## http
 
