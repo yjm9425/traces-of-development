@@ -7,8 +7,8 @@ controller-business layer-data access layer (node.js 구성)
 
 
 ## Node.js
-
-
+ORM
+madge
 
 
 ## Security
@@ -17,6 +17,9 @@ controller-business layer-data access layer (node.js 구성)
 basic
 jwt
 Oauth2
+passport usage, strat
 
 ## http
+
+
 
