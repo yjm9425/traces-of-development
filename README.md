@@ -21,6 +21,10 @@ jwt
 Oauth2
 passport usage, strat
 
+## Database
+데이터베이스 정규화
+인덱스의 이해
+
 ## http
 
 
