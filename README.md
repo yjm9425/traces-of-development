@@ -15,7 +15,9 @@ passport
 
 ## Security
 
-OWASP
+암호화
+
+- 단방향 해시 함수
 
 ## Database
 
