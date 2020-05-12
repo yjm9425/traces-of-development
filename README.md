@@ -17,7 +17,7 @@ passport
 
 암호화
 
-- 단방향 해시 함수
+- [단방향 해시 함수](https://github.com/yjm9425/traces-of-development/blob/master/security/hashFunction.md)
 
 ## Database
 
