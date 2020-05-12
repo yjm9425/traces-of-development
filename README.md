@@ -10,7 +10,6 @@ controller-business layer-data access layer (node.js 구성)
 ## Node.js
 
 ORM
-madge
 passport
 
 ## Security
