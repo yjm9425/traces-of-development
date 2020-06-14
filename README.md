@@ -4,12 +4,14 @@ traces of development
 
 ## Architecture
 
-solid
-controller-business layer-data access layer (node.js 구성)
+solid principle
+
+3layer ( model - controller - route )
 
 ## Node.js
 
 ORM
+
 passport
 
 ## Security
@@ -17,6 +19,9 @@ passport
 암호화
 
 - [단방향 해시 함수](https://github.com/yjm9425/traces-of-development/blob/master/security/hashFunction.md)
+
+웹사이트 해킹
+
 - [CSRF](https://github.com/yjm9425/traces-of-development/blob/master/security/csrf.md)
 
 ## Database
