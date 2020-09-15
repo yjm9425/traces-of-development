@@ -39,6 +39,12 @@ run: pull(이미지 없을때) -> create -> start -> attach
 
 옵션: -i(상호 입출력), -t(tty활성화 bash셀 사용), 두 옵션 설정 안할시 셸을 정상적으로 사용불가.
 
+그외: -d(foreground 실행으로 사용자 입력 받지 않음, foreground 프로그램 실행되지 않으면 컨테이너 종료, 백그라운드 실행)
+
+-e(환경변수설정)
+
+--link(내부 IP를 알 필요 없이 컨테이너에 alias로 접근하도록 설정, 컨테이너간의 의존성 정의)
+
 ```bash
 [create: 이미지 생성]
 docker create -i -t --name userDefinedImageName centos:7
@@ -80,3 +86,24 @@ docker run -i -t --name mywebserber -p 192.0.0.1:7777:80 ubuntu:14.04
 ```
 
 호스트의 port(7777)를 컨테이너의 port(80)으로 연결
+
+**volume 활용하기**
+
+1. stateless: 컨테이너가 아닌 외부에 데이터를 저장하고, 컨테이너는 데이터로 동작(컨테이너 삭제되어도 데이터 보존됨), 볼륨으로 구현가능
+
+- 호스트 볼륨 공유
+- 볼륨 컨테이너
+- 도커 볼륨
+
+2. stateful: 컨테이너가 데이터를 저장하고 있음. 지양할 것
+
+**네트워크 활용하기**
+
+도커 컨테이너 내부 IP는 내부망에서만 쓸 수 있는 IP로 외부와 연결해야함 (eth0 -> veth: 인터페이스 -> docker0: 브릿지 -> eth0)
+
+- 브릿지 네트워크: docker0이 아닌 사용자 정의 브리지를 새로 생성해 각 컨테이너에 연결하는 구조, docker network create --driver bridge 브릿지명
+- 호스트 네트워크: 호스트의 환경을 그대로 사용함, --net host
+- 논 네트워크: 아무런 네트워크를 쓰지 않음. 외부와 연결 단절, --net none
+- 컨테이너 네트워크: 다른 컨테이너의 네트워크 환경을 공유 --net container: 컨테이너명
+
+- -net-alias: 특정 호스트 이름으로 여러 컨테이너에 접근가능. (호스트에 요청시 도커 내장 DNS가 ip 목록을 반환, 라운드 로빈방식으로 응답)
