@@ -1,6 +1,6 @@
-# RADIUS (Remote Authentication Dial in User Service)
+# RADIUS (Remote Authentication Dial In User Service)
 
-RADIUS는 네트워킹 프로토콜로 사용자가 서비스를 요청하면 인증, 인가, 회계관리에 대해 중앙집중화된 서비스를 제공
+RADIUS는 네트워킹 프로토콜로 사용자가 서비스를 요청시 인증, 인가, 회계관리에 대해 중앙집중화된 서비스를 제공
 
 ## RADIUS 서버
 
